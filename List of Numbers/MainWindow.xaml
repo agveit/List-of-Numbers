@@ -3,10 +3,31 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:List_of_Numbers"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="600" Width="900"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
         
+    <Grid Background="Lavender">
+        <ListView x:Name="numberList" Margin="220,75,220,250">
+            <ListView.RenderTransform>
+                <TransformGroup>
+                </TransformGroup>
+            </ListView.RenderTransform>
+            <ListView.View>
+                <GridView >
+                    <GridViewColumn Width="150"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="deleteButton" Margin="250,400,475,100" FontSize="15" Click="Button_Click_Delete" >
+            Del
+        </Button>
+        <Button x:Name="addButton" Margin="475, 400, 250, 100" FontSize="15" Click="Button_Click_Add">
+            Add
+        </Button>
+        <Button x:Name="refreshButton" Margin="380, 350, 380, 170" FontSize="15" Click="Button_Click_Refresh">
+            Refresh
+        </Button>
     </Grid>
 </Window>

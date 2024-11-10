@@ -8,16 +8,14 @@ namespace List_of_Numbers
         {
             InitializeComponent();
         }
+        
+        int clickC = 0;
 
         private void Button_Click_Delete(object sender, RoutedEventArgs e)
         {
             numberList.Items.Remove(numberList.SelectedItem);
         }
 
-        // Переменная для запоминания последнего введённого числа
-        int clickC = 0;
-        
-        
         private void Button_Click_Add(object sender, RoutedEventArgs e)
         {
             numberList.Items.Add(clickC);
